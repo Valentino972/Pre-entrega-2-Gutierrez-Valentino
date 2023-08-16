@@ -1,4 +1,4 @@
-const OPCION_SALIR = 4;
+const opcionSalir = 4;
 let totalDeProducto = 1000;
 const productosCargados = [
         {
@@ -78,19 +78,19 @@ const verFilm = () => {
 const verProductos = () => {
         let opcion ;
         opcion = parseInt(prompt("\n 1-Bolsas \n 2-Bolsas Personalizada \n 3-Film \n 4-Salir"));
-        while(opcion != OPCION_SALIR){
+        while(opcion != opcionSalir){
         switch(opcion){
                 case 1: 
-                verBolsas();
+                        verBolsas();
                 break;
                 case 2: 
-                verBolsasPersonalizadas();
+                        verBolsasPersonalizadas();
                 break;
                 case 3: verFilm();
                 break;
-        default:
-                alert("Ingreso una opcion invalida.");
-        break;
+                default:
+                        alert("Ingreso una opcion invalida.");
+                break;
         }
         opcion = parseInt(prompt("\n 1-Bolsas \n 2-Bolsas Personalizada \n 3-Film \n 4-Salir"));
 }
@@ -116,6 +116,8 @@ const verCarrito = () => {
                 })
                 alert("Felicitaciones tu compra fue realizada con exito \n N° " + numeroCompra + "\n guarda el numero para recibir el producto")
                 carrito.splice(); 
+
+                alert("Gracias vuelva pronto.");        
         }
 }
 
@@ -123,7 +125,7 @@ const verCarrito = () => {
 
 let opcion = parseInt(prompt("elige la operacion que deseas, \n 1-Ver Productos \n 2-Ver Carrito \n 3-Calcular total \n 4-Salir "))
 
-while(opcion != OPCION_SALIR ){
+while(opcion != opcionSalir ){
 
         switch(opcion){
         case 1: 
@@ -133,7 +135,7 @@ while(opcion != OPCION_SALIR ){
                 verCarrito();
                 break;
         case 3: 
-                verCompras();
+                calcularTotal();
                 break;
         default:
         alert("Ingreso una opcion invalida.");
@@ -143,7 +145,7 @@ while(opcion != OPCION_SALIR ){
         opcion = parseInt(prompt("elige la operacion que deseas, \n 1-Ver Productos \n 2-Ver Carrito \n 3-Calcular total \n 4-Salir "));
 }
 
-alert("Gracias vuelva pronto.");
+
 
 
 
